@@ -1,5 +1,9 @@
-<ul class="tasks-list">
-  <li class="task" *ngFor="let task of tasks; index as i">
+<div class="tasks-container">
+  <app-task
+    *ngFor="let task of tasks; index as i; last as isLast"
+    [taskIndex]="i"
+    [isLast]="isLast"
+  >
     {{ task.title }}
-  </li>
-</ul>
+  </app-task>
+</div>
